@@ -1,0 +1,21 @@
+name: CD Staging
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Docker images
+        run: |
+          docker compose -f config/docker-compose.prod.yml build
+      - name: Push to registry
+        run: |
+          echo "TODO: configure registry push"
+      - name: Deploy to staging
+        run: |
+          echo "TODO: configure staging deployment"

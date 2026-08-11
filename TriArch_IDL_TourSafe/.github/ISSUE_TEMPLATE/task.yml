@@ -1,0 +1,36 @@
+name: Task
+description: A concrete work item for the team.
+labels: ["task"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description
+      description: What needs to be done?
+    validations:
+      required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options:
+        - Mobile
+        - Backend
+        - ML
+        - Blockchain
+        - Dashboard
+        - Hardware
+        - Documentation
+        - DevOps
+  - type: input
+    id: owner
+    attributes:
+      label: Suggested Owner
+      placeholder: Member 1 / Member 2 / Member 3
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know this is done?
+    validations:
+      required: true

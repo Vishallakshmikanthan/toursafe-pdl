@@ -1,0 +1,87 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          cd backend
+          pip install -r requirements.txt
+          pip install pytest pytest-asyncio black isort flake8
+      - name: Lint
+        run: |
+          cd backend
+          black --check .
+          isort --check-only .
+          flake8 .
+      - name: Test
+        run: |
+          cd backend
+          pytest
+
+  mobile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: |
+          cd mobile
+          npm ci
+      - name: Lint
+        run: |
+          cd mobile
+          npm run lint
+      - name: Test
+        run: |
+          cd mobile
+          npm test -- --coverage
+
+  blockchain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: |
+          cd blockchain
+          npm ci
+      - name: Test
+        run: |
+          cd blockchain
+          npx hardhat test
+
+  dashboard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install and test client
+        run: |
+          cd dashboard/client
+          npm ci
+          npm run lint
+          npm test
+      - name: Install and test server
+        run: |
+          cd dashboard/server
+          npm ci
+          npm run lint
+          npm test

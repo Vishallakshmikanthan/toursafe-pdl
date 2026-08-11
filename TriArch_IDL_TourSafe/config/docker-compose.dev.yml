@@ -1,0 +1,70 @@
+version: '3.9'
+
+services:
+  mongodb:
+    image: mongo:7
+    container_name: toursafe-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: toursafe
+
+  redis:
+    image: redis:7-alpine
+    container_name: toursafe-redis
+    ports:
+      - "6379:6379"
+
+  fastapi:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    container_name: toursafe-fastapi
+    ports:
+      - "8000:8000"
+    environment:
+      APP_ENV: development
+      MONGODB_URI: mongodb://mongodb:27017/toursafe
+      REDIS_URL: redis://redis:6379/0
+    volumes:
+      - ../backend:/app
+    depends_on:
+      - mongodb
+      - redis
+
+  dashboard-server:
+    build:
+      context: ../dashboard/server
+      dockerfile: Dockerfile
+    container_name: toursafe-dashboard-server
+    ports:
+      - "4000:4000"
+    environment:
+      PORT: 4000
+      MONGODB_URI: mongodb://mongodb:27017/toursafe
+      REDIS_URL: redis://redis:6379/0
+    volumes:
+      - ../dashboard/server:/app
+    depends_on:
+      - mongodb
+      - redis
+
+  dashboard-client:
+    build:
+      context: ../dashboard/client
+      dockerfile: Dockerfile.dev
+    container_name: toursafe-dashboard-client
+    ports:
+      - "5173:5173"
+    volumes:
+      - ../dashboard/client:/app
+    environment:
+      VITE_API_URL: http://localhost:4000
+      VITE_SOCKET_URL: http://localhost:4000
+    depends_on:
+      - dashboard-server
+
+volumes:
+  mongodb_data:
