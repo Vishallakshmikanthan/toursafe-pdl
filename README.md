@@ -19,7 +19,8 @@
 - `tests/` — Cross-module integration and load tests.
 - `scripts/` — Setup and seed helpers.
 - `config/` — Docker Compose and Nginx configuration.
-- `docs/` — Complete project documentation.
+- `docs/` — Engineering implementation documentation.
+- `TriArch_IDL_TourSafe/docs/` — Original project/reference documentation.
 
 ## Team
 
