@@ -22,4 +22,4 @@ ESP32 DevKit V1 or Raspberry Pi Pico W prototype for physical validation.
 
 ## Spec
 
-See [docs/15_HARDWARE_INTEGRATION.md](../docs/15_HARDWARE_INTEGRATION.md).
+See [docs/15_HARDWARE_INTEGRATION.md](../TriArch_IDL_TourSafe/docs/15_HARDWARE_INTEGRATION.md).

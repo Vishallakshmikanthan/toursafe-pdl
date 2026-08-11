@@ -11,4 +11,4 @@ Solidity smart contracts and Hardhat development environment for TourSafe's Self
 
 ## Spec
 
-See [docs/07_BLOCKCHAIN_DID_SPECIFICATION.md](../docs/07_BLOCKCHAIN_DID_SPECIFICATION.md).
+See [docs/07_BLOCKCHAIN_DID_SPECIFICATION.md](../TriArch_IDL_TourSafe/docs/07_BLOCKCHAIN_DID_SPECIFICATION.md).

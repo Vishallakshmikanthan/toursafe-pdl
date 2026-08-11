@@ -15,4 +15,4 @@ FastAPI + Python real-time telemetry and ML inference engine.
 
 ## Spec
 
-See [docs/05_BACKEND_SPECIFICATION.md](../docs/05_BACKEND_SPECIFICATION.md).
+See [docs/05_BACKEND_SPECIFICATION.md](../TriArch_IDL_TourSafe/docs/05_BACKEND_SPECIFICATION.md).

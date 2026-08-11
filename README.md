@@ -4,9 +4,9 @@
 
 ## Quick Start
 
-1. Read [docs/00_MASTER_CONTEXT.md](docs/00_MASTER_CONTEXT.md).
-2. Follow [docs/20_EXECUTION_PLAYBOOK.md](docs/20_EXECUTION_PLAYBOOK.md) to set up the environment.
-3. See domain specs in [docs/](docs/) for module details.
+1. Read [docs/00_MASTER_CONTEXT.md](TriArch_IDL_TourSafe/docs/00_MASTER_CONTEXT.md).
+2. Follow [docs/20_EXECUTION_PLAYBOOK.md](TriArch_IDL_TourSafe/docs/20_EXECUTION_PLAYBOOK.md) to set up the environment.
+3. See domain specs in [docs/](TriArch_IDL_TourSafe/docs/) for module details.
 
 ## Repository Structure
 

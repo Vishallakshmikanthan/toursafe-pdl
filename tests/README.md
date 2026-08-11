@@ -12,4 +12,4 @@ Cross-module, integration, load, and hardware validation tests.
 
 ## Spec
 
-See [docs/16_TESTING_STRATEGY.md](../docs/16_TESTING_STRATEGY.md).
+See [docs/16_TESTING_STRATEGY.md](../TriArch_IDL_TourSafe/docs/16_TESTING_STRATEGY.md).

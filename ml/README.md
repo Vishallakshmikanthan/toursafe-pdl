@@ -13,4 +13,4 @@ LSTM Autoencoder training, evaluation, and ONNX export.
 
 ## Spec
 
-See [docs/06_AI_ML_SPECIFICATION.md](../docs/06_AI_ML_SPECIFICATION.md).
+See [docs/06_AI_ML_SPECIFICATION.md](../TriArch_IDL_TourSafe/docs/06_AI_ML_SPECIFICATION.md).

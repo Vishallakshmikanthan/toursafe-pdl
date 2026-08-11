@@ -13,4 +13,4 @@ React Native + TypeScript traveler application.
 
 ## Spec
 
-See [docs/04_MOBILE_APP_SPECIFICATION.md](../docs/04_MOBILE_APP_SPECIFICATION.md).
+See [docs/04_MOBILE_APP_SPECIFICATION.md](../TriArch_IDL_TourSafe/docs/04_MOBILE_APP_SPECIFICATION.md).

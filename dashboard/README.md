@@ -13,4 +13,4 @@ MERN-stack authority dashboard with Mapbox GL JS.
 
 ## Spec
 
-See [docs/09_EMERGENCY_RESPONSE_ENGINE.md](../docs/09_EMERGENCY_RESPONSE_ENGINE.md).
+See [docs/09_EMERGENCY_RESPONSE_ENGINE.md](../TriArch_IDL_TourSafe/docs/09_EMERGENCY_RESPONSE_ENGINE.md).
